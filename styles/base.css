@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background: #f4f4f4;
+}
+
+header {
+    background: #003366;
+    color: white;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #111;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+nav a:hover {
+    background: gold;
+    color: black;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px gray;
+}
+
+.card img {
+    width: 200px;
+    display: block;
+    margin: 15px auto;
+}
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
