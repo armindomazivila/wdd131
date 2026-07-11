@@ -11,11 +11,15 @@ footer {
     max-width: 640px;
     margin: 1rem auto;
     padding: 1rem;
-    border: 1px solid rgba(0, 0, 0, 2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: #cfe8ff;
 }
 
 header {
+    text-align: center;
+}
+
+main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
