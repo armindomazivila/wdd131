@@ -1,4 +1,4 @@
-const year = document.querySelector("#year");
+const year = document.querySelector("#CurrentYear");
 const lastModified = document.querySelector("#lastModified");
 
 year.textContent = new Date().getFullYear();
