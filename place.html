@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Mozambique | WDD131 Country Page</title>
+
+    <meta name="description"
+        content="Discover Mozambique, the Pearl of the Indian Ocean. Explore its beautiful beaches, wildlife, culture, weather, and famous destinations.">
+
+    <meta name="author" content="Armindo Mazivila">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Discover Mozambique</h1>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <picture>
+
+                <source media="(min-width:1000px)" srcset="images/hero.webp">
+
+                <img src="images/hero-small.webp" alt="Beautiful landscape of Mozambique" loading="eager">
+
+            </picture>
+
+            <div class="hero-text">
+
+                <h2>The Pearl of the Indian Ocean</h2>
+
+                <p>
+                    Experience breathtaking beaches, incredible wildlife,
+                    friendly people, and unforgettable adventures.
+                </p>
+
+                <a href="#places" class="button">Explore Mozambique</a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COUNTRY INFO ================= -->
+
+        <section class="info">
+
+            <h2>Country Information</h2>
+
+            <div class="info-grid">
+
+                <div>
+
+                    <h3>General Information</h3>
+
+                    <ul>
+
+                        <li><strong>Capital:</strong> Maputo</li>
+
+                        <li><strong>Population:</strong> 33 Million</li>
+
+                        <li><strong>Area:</strong> 801,590 km²</li>
+
+                        <li><strong>Currency:</strong> Mozambican Metical (MZN)</li>
+
+                        <li><strong>Official Language:</strong> Portuguese</li>
+
+                        <li><strong>Independence:</strong> 25 June 1975</li>
+
+                        <li><strong>Provinces:</strong> 11</li>
+
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <img src="images/flag.webp" alt="Flag of Mozambique" loading="lazy">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WEATHER ================= -->
+
+        <section class="weather">
+
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+
+            <div class="weather-card">
+
+                <p><strong>Temperature:</strong> <span id="temperature">26</span> °C</p>
+
+                <p><strong>Wind Speed:</strong> <span id="windspeed">10</span> km/h</p>
+
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DESTINATIONS ================= -->
+
+        <section class="places" id="places">
+
+            <h2>Top Destinations</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <img src="images/bazaruto.webp" alt="Bazaruto Archipelago" loading="lazy">
+
+                    <h3>Bazaruto Archipelago</h3>
+
+                    <p>
+                        Crystal-clear water, white sandy beaches,
+                        snorkeling, and diving.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="images/maputo.webp" alt="Maputo City" loading="lazy">
+
+                    <h3>Maputo</h3>
+
+                    <p>
+                        The capital city filled with culture,
+                        restaurants, architecture, and history.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="images/gorongosa.webp" alt="Gorongosa National Park" loading="lazy">
+
+                    <h3>Gorongosa National Park</h3>
+
+                    <p>
+                        One of Africa's greatest wildlife
+                        conservation areas.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="images/tofo.webp" alt="Tofo Beach" loading="lazy">
+
+                    <h3>Tofo Beach</h3>
+
+                    <p>
+                        Famous for whale sharks,
+                        scuba diving,
+                        and beautiful sunsets.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            🌍 Armindo Mazivila 🌍
+            Mozambique
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
