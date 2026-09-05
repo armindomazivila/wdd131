@@ -1,68 +1,189 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Roboto, sans-serif;
-    background: #f4f4f4;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #111;
+    background-color: white;
 }
 
+
 header {
-    background: #003366;
+    background-color: #23577d;
     color: white;
 }
 
 #course-title {
     display: block;
     text-align: center;
-    font-size: 2rem;
-    padding: 20px;
+    font-size: 1.3rem;
+    padding: 16px;
 }
 
+
+
 nav {
+    background-color: #333;
     display: flex;
-    justify-content: center;
-    background: #111;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 15px;
+    font-size: 1.1rem;
 }
 
 nav a:hover {
-    background: gold;
-    color: black;
+    color: #f5d76e;
+    text-decoration: underline;
 }
+
+
 
 main {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-
-    display: grid;
-    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px 15px;
 }
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    align-items: stretch;
+}
+
+
 
 .card {
-    background: white;
-    padding: 20px;
+    border: 1px solid #aaa;
     border-radius: 8px;
-    box-shadow: 0 0 5px gray;
+    overflow: hidden;
+    background-color: white;
 }
 
-.card img {
-    width: 200px;
-    display: block;
-    margin: 15px auto;
+.card h2 {
+    margin: 0;
+    padding: 12px;
+    text-align: center;
+    background-color: #23577d;
+    color: white;
+    font-size: 1.1rem;
 }
+
+
+
+.about-card {
+    min-height: 430px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    gap: 20px;
+    padding: 15px;
+    align-items: start;
+}
+
+.about-content p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.about-content img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+}
+
+
+
+.card h3 {
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    max-width: 500px;
+    margin: 10px auto 15px;
+    padding-bottom: 5px;
+}
+
+.country {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 15px;
+    padding: 0 15px 15px;
+    align-items: start;
+}
+
+.country figure {
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.country img {
+    width: 140px;
+    height: 85px;
+    object-fit: cover;
+    border: 1px solid #aaa;
+}
+
+.country figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.country p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+*/ web resources card */ .resources-card ul {
+    margin-top: 110px;
+    padding-left: 40px;
+}
+
+.resources-card li {
+    margin-bottom: 10px;
+}
+
+.resources-card a {
+    color: blue;
+}
+
+.resources-card a:hover {
+    color: #23577d;
+}
+
+
 
 footer {
-    background: #003366;
+    background-color: #23577d;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+#lastModified {
+    color: yellow;
+    font-size: 0.85rem;
 }
