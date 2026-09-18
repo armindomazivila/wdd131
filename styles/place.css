@@ -128,6 +128,15 @@ main {
     text-align: center;
 }
 
+.places h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0.5rem auto 0;
+    background-color: var(--yellow);
+}
+
 .place-grid {
     display: grid;
     grid-template-columns: 1fr;
