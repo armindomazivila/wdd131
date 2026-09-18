@@ -1,40 +1,127 @@
+:root {
+    --primary-color: #007a3d;
+    --secondary-color: #fce100;
+    --accent-color: #d21034;
+    --dark-color: #222222;
+    --light-color: #ffffff;
+    --background-color: #f4f4f4;
+
+    --heading-font: "Poppins", sans-serif;
+    --body-font: "Poppins", sans-serif;
+
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Roboto, helvetica, sans-serif;
+    margin: 0;
+    font-family: var(--body-font);
+    color: var(--dark-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
 }
 
-header,
-main,
-footer {
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-marquee {
+header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
     padding: 1rem;
-    background-color: #eee;
+    border-bottom: 6px solid var(--secondary-color);
 }
 
-h1 {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+header h1 {
+    margin: 0;
+    font-size: 2rem;
 }
 
 main {
-    color: navy;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.about,
+.facts,
+.places,
+.weather {
+    background-color: var(--light-color);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.about p {
+    margin-bottom: 1rem;
+}
+
+.places h2 {
     text-align: center;
 }
 
-article p {
-    text-align: justify;
+.place-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
-.callout {
-    color: #777;
-    background-color: #702963;
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+figcaption {
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.weather-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.weather-content p {
+    margin: 0.4rem 0;
 }
 
 footer {
-    margin-top: 1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    font-size: smaller;
-    text-align: right;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 1rem;
+    border-top: 6px solid var(--secondary-color);
+}
+
+footer p {
+    margin: 0.3rem;
 }
