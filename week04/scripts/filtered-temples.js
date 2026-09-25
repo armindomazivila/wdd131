@@ -85,9 +85,7 @@ const temples = [
 
 
 
-const templeContainer = document.querySelector("#temple-container");
-
-temples.forEach((temple) => {
+function createTempleCard(temple) {
     const card = document.createElement("article");
 
     card.innerHTML = `
@@ -102,5 +100,11 @@ temples.forEach((temple) => {
         >
     `;
 
-    templeContainer.appendChild(card);
+    return card;
+}
+
+const templeContainer = document.querySelector("#temple-container");
+
+temples.forEach((temple) => {
+    templeContainer.appendChild(createTempleCard(temple));
 });
