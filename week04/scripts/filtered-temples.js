@@ -91,16 +91,16 @@ temples.forEach((temple) => {
     const card = document.createElement("article");
 
     card.innerHTML = `
-    <h2>${temple.templeName}</h2>
-    <p><strong>Location:</strong> ${temple.location}</p>
-    <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-    <p><strong>Area:</strong> ${temple.area.toLocaleString()} square feet</p>
-    <img 
-      src="${temple.imageUrl}" 
-      alt="${temple.templeName}"
-      loading="lazy"
-    >
-  `;
+        <h2>${temple.templeName}</h2>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Area:</strong> ${temple.area.toLocaleString()} square feet</p>
+        <img
+            src="${temple.imageUrl}"
+            alt="${temple.templeName}"
+            loading="lazy"
+        >
+    `;
 
     templeContainer.appendChild(card);
 });
