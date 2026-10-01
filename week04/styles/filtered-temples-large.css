@@ -26,6 +26,11 @@
         padding: 0.75rem 1rem;
     }
 
+    .navigation a:hover,
+    .navigation a:focus {
+        background-color: #ffffff33;
+    }
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -35,9 +40,8 @@
 @media screen and (min-width: 1000px) {
 
     .gallery {
-
         grid-template-columns: repeat(3, 1fr);
-
+        gap: 2rem;
     }
 
 }

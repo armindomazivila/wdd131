@@ -8,10 +8,13 @@ body {
     font-family: "Roboto", sans-serif;
     color: #222;
     background-color: #f5f5f5;
+    line-height: 1.5;
 }
 
+/* Header */
+
 header {
-    background: #3b0a63;
+    background-color: #3b0a63;
     color: white;
     padding: 1rem;
 }
@@ -21,6 +24,8 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+/* Menu button */
+
 #menu {
     display: block;
     margin: auto;
@@ -29,7 +34,10 @@ header h1 {
     color: white;
     font-size: 2rem;
     cursor: pointer;
+    padding: 0.25rem 0.5rem;
 }
+
+/* Navigation */
 
 nav {
     display: flex;
@@ -39,18 +47,22 @@ nav {
 
 .navigation a {
     display: none;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     color: white;
     text-decoration: none;
+    font-weight: 700;
 }
 
-.navigation a:hover {
-    background: #ffffff33;
+.navigation a:hover,
+.navigation a:focus {
+    background-color: #ffffff33;
 }
 
-.open a {
+.navigation.open a {
     display: block;
 }
+
+/* Main */
 
 main {
     max-width: 1100px;
@@ -58,10 +70,12 @@ main {
     padding: 1.5rem;
 }
 
-main h2 {
+main>h2 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
+/* Temple gallery */
 
 .gallery {
     display: grid;
@@ -69,7 +83,9 @@ main h2 {
     gap: 1.5rem;
 }
 
-figure {
+/* Temple cards */
+
+.gallery article {
     background-color: white;
     padding: 1rem;
     text-align: center;
@@ -77,21 +93,29 @@ figure {
     box-shadow: 0 2px 6px #00000022;
 }
 
-figure img {
+.gallery article h2 {
+    margin-bottom: 0.75rem;
+    color: #3b0a63;
+}
+
+.gallery article p {
+    margin-bottom: 0.5rem;
+}
+
+.gallery article img {
     display: block;
     width: 100%;
     height: auto;
+    margin-top: 1rem;
     border-radius: 5px;
 }
 
-figcaption {
-    padding-top: 0.75rem;
-    font-weight: bold;
-}
+/* Footer */
 
 footer {
-    background: #3b0a63;
+    background-color: #3b0a63;
     color: white;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
 }
