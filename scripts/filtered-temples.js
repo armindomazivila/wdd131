@@ -61,7 +61,8 @@ const temples = [
         dedicated: "1985, August, 24",
         area: 19000,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-21809-main.jpg"
+            "https://churchofjesuschristtemples.org/johannesburg-south-africa-temple/"
+
     },
     {
         templeName: "Accra Ghana",
