@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description"
-        content="Temple Album, Explore a responsive Temple Album featuring beautiful temple images, a mobile-friendly navigation menu, and a modern CSS Grid layout">
+        content="Explore temples from around the world in a responsive Temple Album featuring temple locations, dedication dates, and temple sizes.">
+
     <meta name="author" content="Armindo Armando Mazivila">
 
     <title>Temple Album | WDD 131 | Armindo Mazivila</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <link rel="stylesheet" href="styles/filtered-temples-large.css">
@@ -27,15 +29,16 @@
 
         <h1>Temple Album</h1>
 
-        <button id="menu" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        <button id="menu" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
         <nav class="navigation">
-
-            <a href="#">Home</a>
-            <a href="#">Old</a>
-            <a href="#">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
-
+            <a href="#" id="home">Home</a>
+            <a href="#" id="old">Old</a>
+            <a href="#" id="new">New</a>
+            <a href="#" id="large">Large</a>
+            <a href="#" id="small">Small</a>
         </nav>
 
     </header>
@@ -44,23 +47,21 @@
 
         <h2>Temple Gallery</h2>
 
-        <div class="gallery">
-            <section id="temple-container"></section>
-
-
-        </div>
+        <section id="temple-container" class="gallery"></section>
 
     </main>
 
     <footer>
 
         <p>
-            &copy;<span id="CurrentYear"></span> Armindo Armando Mazivila - Mozambique
+            &copy; <span id="CurrentYear"></span>
+            Armindo Armando Mazivila - Mozambique
         </p>
 
         <p id="lastModified"></p>
 
     </footer>
+
 </body>
 
 </html>

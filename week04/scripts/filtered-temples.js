@@ -55,8 +55,6 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-
-    // Additional temples
     {
         templeName: "Johannesburg South Africa",
         location: "Johannesburg, South Africa",
@@ -84,7 +82,7 @@ const temples = [
 ];
 
 
-
+// Create one temple card
 function createTempleCard(temple) {
     const card = document.createElement("article");
 
@@ -103,8 +101,101 @@ function createTempleCard(temple) {
     return card;
 }
 
-const templeContainer = document.querySelector("#temple-container");
 
-temples.forEach((temple) => {
-    templeContainer.appendChild(createTempleCard(temple));
+// Display temple cards
+function displayTemples(templeList) {
+    const templeContainer = document.querySelector("#temple-container");
+
+    templeContainer.innerHTML = "";
+
+    templeList.forEach((temple) => {
+        templeContainer.appendChild(createTempleCard(temple));
+    });
+}
+
+
+// Select filter buttons
+const homeButton = document.querySelector("#home");
+const oldButton = document.querySelector("#old");
+const newButton = document.querySelector("#new");
+const largeButton = document.querySelector("#large");
+const smallButton = document.querySelector("#small");
+
+
+// Home - display all temples
+homeButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    displayTemples(temples);
 });
+
+
+// Old - temples dedicated before 1900
+oldButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const oldTemples = temples.filter((temple) => {
+        const year = Number(temple.dedicated.substring(0, 4));
+        return year < 1900;
+    });
+
+    displayTemples(oldTemples);
+});
+
+
+// New - temples dedicated after 2000
+newButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const newTemples = temples.filter((temple) => {
+        const year = Number(temple.dedicated.substring(0, 4));
+        return year > 2000;
+    });
+
+    displayTemples(newTemples);
+});
+
+
+// Large - temples larger than 90,000 square feet
+largeButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const largeTemples = temples.filter((temple) => {
+        return temple.area > 90000;
+    });
+
+    displayTemples(largeTemples);
+});
+
+
+// Small - temples smaller than 10,000 square feet
+smallButton.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const smallTemples = temples.filter((temple) => {
+        return temple.area < 10000;
+    });
+
+    displayTemples(smallTemples);
+});
+
+
+// Mobile navigation menu
+const menuButton = document.querySelector("#menu");
+const navigation = document.querySelector(".navigation");
+
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("open");
+
+    const isOpen = navigation.classList.contains("open");
+
+    menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+});
+
+
+// Display all temples when the page loads
+displayTemples(temples);
