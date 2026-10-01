@@ -61,7 +61,7 @@ const temples = [
         dedicated: "1985, August, 24",
         area: 19000,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
+            "https://content.churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
 
     },
     {
@@ -70,15 +70,15 @@ const temples = [
         dedicated: "2004, January, 11",
         area: 17500,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
+            "https://content.churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
     },
     {
         templeName: "Nairobi Kenya",
         location: "Nairobi, Kenya",
-        dedicated: "2025, April, 20",
+        dedicated: "2025, May, 18",
         area: 28000,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-60488-main.jpg"
+            "https://content.churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-60488-main.jpg"
     }
 ];
 
