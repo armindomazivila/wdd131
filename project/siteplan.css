@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #006B35;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 8px solid #FCE100;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    margin: 0.5rem 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #006B35;
+    border-bottom: 3px solid #FCE100;
+    padding-bottom: 0.5rem;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.color {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #999999;
+    flex-shrink: 0;
+}
+
+.green {
+    background-color: #006B35;
+}
+
+.yellow {
+    background-color: #FCE100;
+}
+
+.white {
+    background-color: #FFFFFF;
+}
+
+.dark {
+    background-color: #222222;
+}
+
+.poppins-example {
+    font-family: "Poppins", sans-serif;
+}
+
+.roboto-example {
+    font-family: "Roboto", sans-serif;
+}
+
+.wireframe {
+    border: 3px solid #222222;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.wireframe>div {
+    border: 2px solid #006B35;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #ffffff;
+}
+
+.wireframe-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.wireframe-row div {
+    flex: 1;
+    border: 2px solid #006B35;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #006B35;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
