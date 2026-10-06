@@ -18,7 +18,7 @@
         gap: 1.5rem;
     }
 
-    .rating span:not(.sr-only) {
+    .rating label {
         font-size: 1.7rem;
     }
 
@@ -31,4 +31,3 @@
     .confirmation section {
         padding: 3rem;
     }
-}
