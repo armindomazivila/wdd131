@@ -93,7 +93,7 @@ textarea:focus {
     align-items: center;
 }
 
-.rating label {
+.rating-star {
     margin: 0;
     cursor: pointer;
     text-align: center;
