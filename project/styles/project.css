@@ -109,7 +109,10 @@ nav a[aria-current=“page”] {
 }
 
 .hero-content {
+    color: #ffffff;
+    padding: 3rem 5%;
     max-width: 700px;
+
 }
 
 .eyebrow {
