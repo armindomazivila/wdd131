@@ -101,17 +101,11 @@ nav a[aria-current=“page”] {
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    min-height: 460px;
-    padding: 4rem 7%;
-    background-color: var(–dark-green);
     background-image:
         linear-gradient(90deg, rgb(0 0 0 / 75%), rgb(0 0 0 / 25%)),
-        url(”../../images/hero.webp”);
+        url("../../images/hero.webp");
     background-position: center;
     background-size: cover;
-    color: #ffffff;
 }
 
 .hero-content {
