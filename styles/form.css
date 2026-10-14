@@ -60,8 +60,8 @@ label {
 }
 
 select,
-input[type=“date”],
-input[type=“text”],
+input[type="date"],
+input[type="text"],
 textarea {
     width: 100%;
     margin-top: 0.4rem;
@@ -74,42 +74,19 @@ textarea {
 }
 
 select:focus,
-input[type=“date”]:focus,
-input[type=“text”]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus,
 textarea:focus {
     outline: 3px solid #f4b942;
     outline-offset: 2px;
 }
 
-.rating {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 0.75rem;
-}
-
-.rating div {
-    display: flex;
-    align-items: center;
-}
-
-.rating-star {
-    margin: 0;
-    cursor: pointer;
-    text-align: center;
-    font-size: 1.4rem;
-}
-
-.rating input {
-    margin-right: 0.25rem;
-}
-
-input[type=“checkbox”] {
+input[type="checkbox"] {
     margin-right: 0.5rem;
     transform: scale(1.1);
 }
 
-input[type=“submit”] {
+input[type="submit"] {
     width: 100%;
     padding: 0.9rem;
     border: none;
@@ -121,11 +98,11 @@ input[type=“submit”] {
     cursor: pointer;
 }
 
-input[type=“submit”]:hover {
+input[type="submit"]:hover {
     background-color: #0b2540;
 }
 
-input[type=“submit”]:focus {
+input[type="submit"]:focus {
     outline: 3px solid #f4b942;
     outline-offset: 2px;
 }
