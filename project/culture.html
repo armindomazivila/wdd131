@@ -15,8 +15,7 @@
 <body>
     <header>
         <a class="logo" href="index.html">Explore Mozambique</a>
-
-        <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false"
+        <button id="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false"
             aria-controls="main-navigation">
             ☰
         </button>
@@ -55,7 +54,7 @@
 
             <div class="destination-grid">
                 <article class="destination-card">
-                    <img src="../images/maputo.webp" alt="Urban scenery representing Mozambique's cultural diversity"
+                    <img src="../images/maputo.webp" alt="Maputo city scenery representing Mozambique's urban culture"
                         width="800" height="600" loading="lazy">
                     <div class="card-content">
                         <h3>Languages and Community</h3>
@@ -63,7 +62,7 @@
                             Portuguese is Mozambique's official language.
                             Many Mozambicans also speak local languages,
                             including Emakhuwa, Xichangana, Elomwe,
-                            Cisena, and other languages.
+                            Cisena, and others.
                         </p>
                         <p>
                             Language and community traditions help preserve
@@ -73,9 +72,8 @@
                 </article>
 
                 <article class="destination-card">
-                    <img src="../images/tofo-beach.webp"
-                        alt="Mozambique's Indian Ocean coast, reflecting its coastal heritage" width="800" height="600"
-                        loading="lazy">
+                    <img src="../images/tofo-beach.webp" alt="Tofo Beach on Mozambique's Indian Ocean coast" width="800"
+                        height="600" loading="lazy">
                     <div class="card-content">
                         <h3>Food and Coastal Traditions</h3>
                         <p>
@@ -92,8 +90,8 @@
                 </article>
 
                 <article class="destination-card">
-                    <img src="../images/bazaruto.webp" alt="Mozambique's coastal landscape" width="800" height="600"
-                        loading="lazy">
+                    <img src="../images/bazaruto.webp" alt="Islands and coastal scenery in the Bazaruto Archipelago"
+                        width="800" height="600" loading="lazy">
                     <div class="card-content">
                         <h3>Music and Dance</h3>
                         <p>
@@ -110,8 +108,9 @@
                 </article>
 
                 <article class="destination-card">
-                    <img src="../images/gorongosa.webp" alt="Mozambique's natural environment and landscapes"
-                        width="800" height="600" loading="lazy">
+                    <img src="../images/gorongosa.webp"
+                        alt="Natural scenery representing Mozambique's diverse environment" width="800" height="600"
+                        loading="lazy">
                     <div class="card-content">
                         <h3>Nature and Traditions</h3>
                         <p>
@@ -127,6 +126,41 @@
                     </div>
                 </article>
             </div>
+        </section>
+
+        <section class="section-container culture-quiz" id="culture-quiz">
+            <p class="eyebrow">Test Your Knowledge</p>
+            <h2>How Well Do You Know Mozambique?</h2>
+            <p>
+                Answer this question about Mozambique's cultural heritage.
+            </p>
+
+            <form id="culture-quiz-form">
+                <fieldset>
+                    <legend>
+                        Which music style is well known in Mozambique?
+                    </legend>
+
+                    <label>
+                        <input type="radio" name="culture-answer" value="marrabenta" required>
+                        Marrabenta
+                    </label>
+
+                    <label>
+                        <input type="radio" name="culture-answer" value="flamenco">
+                        Flamenco
+                    </label>
+
+                    <label>
+                        <input type="radio" name="culture-answer" value="reggae">
+                        Reggae
+                    </label>
+                </fieldset>
+
+                <button class="button" type="submit">Check My Answer</button>
+            </form>
+
+            <p id="culture-quiz-result" role="status" aria-live="polite"></p>
         </section>
 
         <section class="culture-promo">

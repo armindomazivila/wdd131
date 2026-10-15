@@ -283,3 +283,43 @@ footer a {
     }
 
 }
+
+/* Cultural knowledge quiz */
+.culture-quiz {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.culture-quiz fieldset {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border: 1px solid #777;
+    border-radius: 8px;
+}
+
+.culture-quiz legend {
+    padding: 0 0.5rem;
+    font-weight: 700;
+}
+
+.culture-quiz label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+}
+
+.culture-quiz input[type=“radio”] {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+}
+
+#culture-quiz-result {
+    margin-top: 1rem;
+    font-weight: 700;
+}

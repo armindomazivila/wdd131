@@ -27,7 +27,7 @@ const destinations = [
     }
 ];
 
-// Select the favorite feature elements when they exist.
+// Select the favorite feature elements.
 const favoriteButtons = document.querySelectorAll(".favorite-button");
 const favoriteMessage = document.querySelector("#favorite-message");
 const favoriteList = document.querySelector("#favorite-list");
@@ -60,6 +60,7 @@ function toggleNavigation() {
     );
 
     navigation.classList.toggle("open");
+
     menuButton.textContent = isExpanded ? "☰" : "✕";
 }
 
@@ -78,10 +79,19 @@ function getSavedFavorites() {
             return [];
         }
 
-        // Keep only destination names that exist in our destination data.
-        return parsedFavorites.filter(savedName =>
-            destinations.some(destination => destination.name === savedName)
-        );
+        // Keep only valid destination names and remove duplicates.
+        return [
+            ...new Set(
+                parsedFavorites.filter(
+                    savedName =>
+                        typeof savedName === "string" &&
+                        destinations.some(
+                            destination =>
+                                destination.name === savedName
+                        )
+                )
+            )
+        ];
     } catch (error) {
         console.error("Unable to read saved favorites:", error);
         return [];
@@ -91,7 +101,11 @@ function getSavedFavorites() {
 // Save the favorites array to localStorage.
 function storeFavorites(favorites) {
     try {
-        localStorage.setItem(storageKey, JSON.stringify(favorites));
+        localStorage.setItem(
+            storageKey,
+            JSON.stringify(favorites)
+        );
+
         return true;
     } catch (error) {
         console.error("Unable to save favorites:", error);
@@ -99,7 +113,7 @@ function storeFavorites(favorites) {
     }
 }
 
-// Display the favorite destinations in the page.
+// Display the favorite destinations on the page.
 function displayFavorites() {
     if (!favoriteList) {
         return;
@@ -110,6 +124,7 @@ function displayFavorites() {
     // Remove the previous list contents.
     favoriteList.replaceChildren();
 
+    // Handle an empty favorites list.
     if (favorites.length === 0) {
         if (favoriteMessage) {
             favoriteMessage.textContent =
@@ -121,7 +136,6 @@ function displayFavorites() {
 
     // Create a list item for each saved destination.
     favorites.forEach(favoriteName => {
-        const listItem = document.createElement("li");
         const destination = destinations.find(
             place => place.name === favoriteName
         );
@@ -130,6 +144,7 @@ function displayFavorites() {
             return;
         }
 
+        const listItem = document.createElement("li");
         const destinationText = document.createElement("span");
 
         destinationText.textContent =
@@ -139,6 +154,7 @@ function displayFavorites() {
 
         removeButton.type = "button";
         removeButton.textContent = "Remove";
+
         removeButton.setAttribute(
             "aria-label",
             `Remove ${destination.name} from favorites`
@@ -154,7 +170,8 @@ function displayFavorites() {
 
     if (favoriteMessage) {
         favoriteMessage.textContent =
-            `You have ${favorites.length} saved destination${favorites.length === 1 ? "" : "s"}.`;
+            `You have ${favorites.length} saved destination` +
+            `${favorites.length === 1 ? "" : "s"}.`;
     }
 }
 
@@ -201,6 +218,10 @@ function addFavorite(destinationName) {
 // Remove a destination from favorites.
 function removeFavorite(destinationName) {
     const favorites = getSavedFavorites();
+
+    if (!favorites.includes(destinationName)) {
+        return;
+    }
 
     const updatedFavorites = favorites.filter(
         name => name !== destinationName
@@ -254,11 +275,11 @@ function clearFavorites() {
 }
 
 // Register the mobile navigation event listener.
-if (menuButton) {
+if (menuButton && navigation) {
     menuButton.addEventListener("click", toggleNavigation);
 }
 
-// Register an event listener for every destination favorite button.
+// Register an event listener for each favorite button.
 favoriteButtons.forEach(button => {
     button.addEventListener("click", () => {
         const destinationName = button.dataset.destination;
@@ -272,6 +293,62 @@ if (clearFavoritesButton) {
     clearFavoritesButton.addEventListener("click", clearFavorites);
 }
 
-// Initialize the page.
+// Cultural quiz questions stored as an array of objects.
+const cultureQuestions = [
+    {
+        question: "Which music style is well known in Mozambique?",
+        answers: ["Marrabenta", "Flamenco", "Reggae"],
+        correctAnswer: "Marrabenta",
+        explanation:
+            "Marrabenta is a popular music style associated with Mozambique."
+    }
+];
+
+// Select the Cultural Quiz elements.
+const cultureQuizForm = document.querySelector("#culture-quiz-form");
+const cultureQuizResult = document.querySelector("#culture-quiz-result");
+
+// Check the user's answer and display feedback.
+function checkCultureAnswer(event) {
+    event.preventDefault();
+
+    if (!cultureQuizResult) {
+        return;
+    }
+
+    const selectedAnswer = cultureQuizForm.querySelector(
+        'input[name="culture-answer"]:checked'
+    );
+
+    if (!selectedAnswer) {
+        cultureQuizResult.textContent =
+            "Please select an answer first.";
+
+        return;
+    }
+
+    const question = cultureQuestions[0];
+
+    if (
+        selectedAnswer.value.trim().toLowerCase() ===
+        question.correctAnswer.toLowerCase()
+    ) {
+        cultureQuizResult.textContent =
+            `Correct! ${question.explanation}`;
+    } else {
+        cultureQuizResult.textContent =
+            `Not quite. The correct answer is ${question.correctAnswer}. ` +
+            question.explanation;
+    }
+}
+
+// Activate the quiz only on a page containing its form and result element.
+if (cultureQuizForm && cultureQuizResult) {
+    cultureQuizForm.addEventListener("submit", checkCultureAnswer);
+}
+
+// Update the footer year.
 updateFooterYear();
+
+// Display saved favorites when the relevant element exists.
 displayFavorites();
