@@ -323,3 +323,158 @@ footer a {
     margin-top: 1rem;
     font-weight: 700;
 }
+
+
+/* Shared section spacing */
+.about-section,
+.visit-section,
+.contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    scroll-margin-top: 2rem;
+}
+
+.about-section h2,
+.visit-section h2,
+.contact-section h2 {
+    margin-bottom: 1.25rem;
+}
+
+.about-section>p:not(.eyebrow),
+.visit-section>.section-container>p:not(.eyebrow),
+.contact-section>p:not(.eyebrow) {
+    max-width: 750px;
+    line-height: 1.8;
+}
+
+/* About Us */
+.about-section {
+    text-align: center;
+}
+
+.about-section>p:not(.eyebrow) {
+    margin: 0 auto 1rem;
+}
+
+/* Visit Us */
+.visit-section {
+    background-color: #f2f7ef;
+    text-align: center;
+}
+
+.visit-section .section-container>p:not(.eyebrow) {
+    margin: 0 auto 1.5rem;
+}
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.visit-card {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border-top: 4px solid #006b35;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 8%);
+}
+
+.visit-card h3 {
+    margin-top: 0;
+}
+
+.visit-card p {
+    line-height: 1.7;
+}
+
+.visit-note {
+    font-size: 0.95rem;
+}
+
+/* Contact Us */
+.contact-section {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-section>p:not(.eyebrow) {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+#contact-form {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #777;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #222;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 3px solid #006b35;
+    outline-offset: 3px;
+}
+
+#contact-form button {
+    justify-self: start;
+    font: inherit;
+    cursor: pointer;
+}
+
+#contact-feedback {
+    min-height: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Footer navigation */
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+    padding: 0.75rem 1rem;
+}
+
+.footer-navigation a {
+    text-underline-offset: 4px;
+}
+
+/* Tablet and desktop */
+@media screen and (min-width: 700px) {
+    .visit-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .about-section,
+    .visit-section,
+    .contact-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
