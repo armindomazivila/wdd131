@@ -352,3 +352,30 @@ updateFooterYear();
 
 // Display saved favorites when the relevant element exists.
 displayFavorites();
+
+
+// Select the Contact Us form and feedback element.
+const contactForm = document.querySelector("#contact-form");
+const contactFeedback = document.querySelector("#contact-feedback");
+
+// Handle contact form submission.
+if (contactForm && contactFeedback) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Check that all required fields are valid.
+        if (!contactForm.checkValidity()) {
+            contactForm.reportValidity();
+            return;
+        }
+
+        // Display feedback to the visitor.
+        contactFeedback.textContent =
+            "Thank you for contacting Explore Mozambique! " +
+            "Your message has not been sent because this website " +
+            "does not yet have a message delivery service.";
+
+        // Clear the form after submission.
+        contactForm.reset();
+    });
+}
